@@ -2,7 +2,7 @@
 <launch>
   <arg name="sim_vision" default="True"/>
   <arg name="sim_robot" default="True"/>
-  <arg name="mesh_file" default="$(find-pkg-share snp_fanuc_workcell)/results_mesh.ply"/>
+  <arg name="mesh_file" default="$(find-pkg-share snp_fanuc_workcell)/meshes/results_mesh.ply"/>
   <arg name="scan_trajectory_file" default="$(find-pkg-share snp_fanuc_workcell)/config/scan_traj.yaml"/>
   <arg name="verbose" default="False"/>
   <arg name="touch_links" default="[acryllic, floor]"/>

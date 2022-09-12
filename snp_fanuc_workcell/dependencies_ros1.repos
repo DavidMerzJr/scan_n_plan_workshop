@@ -1,5 +1,5 @@
 - git:
-    local-name: fanuc
+    local-name: fanuc-ros1
     uri: https://github.com/DavidSpielman/fanuc.git'
     version: 9f188c5286ee0aa204028b494dd90dfb5eec9cc5
 - git:

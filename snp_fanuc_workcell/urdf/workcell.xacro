@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <robot name="snp_workcell" xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:include filename="$(find fanuc_lrmate200ic_support)/urdf/lrmate200ic_macro.xacro" />
+  <xacro:include filename="$(find fanuc_lrmate200ic_support)/urdf/lrmate200ic_macro.xacro"/>
   <xacro:fanuc_lrmate200ic prefix=""/>
 
   <xacro:property name="dt_flange_width" value="0.040"/>
@@ -126,7 +126,7 @@
     <xacro:property name="thicknessa_plus_p" value="${0.01+0.0047625}"/>
     <link name="acryllic">
       <visual>
-        <origin xyz="0 0 ${0.001+thicknessa_plus_p/2}"/>
+        <origin xyz="0.08 0 ${0.001+thicknessa_plus_p/2}"/>
         <geometry>
           <box size="${lengtha} ${widtha} ${thicknessa_plus_p}"/>
         </geometry>
@@ -171,7 +171,7 @@
   <joint name="ceiling_to_base" type="fixed">
     <parent link="ceiling"/>
     <child link="base_link"/>
-    <origin xyz="-${length/2-2*0.0508-0.1778} -0.169135 0" rpy="0 -3.14 1.5708"/>
+    <origin xyz="-${length/2-2*0.0508-0.1778} 0.169135 0" rpy="0 -3.14 1.5708"/>
   </joint>
 
   <!-- Create a frame representing the robot tool flange (behind the teach tool and nominal tool0 frame) for IKFast -->
