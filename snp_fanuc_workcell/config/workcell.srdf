@@ -19,13 +19,13 @@
     <disable_collisions link1="link_2" link2="link_6" reason="Never"/>
     <disable_collisions link1="base_link" link2="ceiling" reason="Never"/>
     <disable_collisions link1="link_5" link2="link_4" reason="Adjacent"/>
-    <disable_collisions link1="link_1" link2="table" reason="Never"/>
+    <!--<disable_collisions link1="link_1" link2="table" reason="Never"/>-->
     <disable_collisions link1="link_4" link2="link_1" reason="Never"/>
     <disable_collisions link1="base_link" link2="link_1" reason="Adjacent"/>
     <disable_collisions link1="link_6" link2="link_3" reason="Never"/>
     <disable_collisions link1="link_5" link2="link_6" reason="Adjacent"/>
     <disable_collisions link1="link_2" link2="link_1" reason="Adjacent"/>
-    <disable_collisions link1="link_2" link2="table" reason="Never"/>
+    <!--<disable_collisions link1="link_2" link2="table" reason="Never"/>-->
     <disable_collisions link1="link_6" link2="ee" reason="Never"/>
     <disable_collisions link1="link_4" link2="link_3" reason="Adjacent"/>
     <disable_collisions link1="link_2" link2="link_3" reason="Adjacent"/>
@@ -35,4 +35,15 @@
     <disable_collisions link1="link_2" link2="link_4" reason="Never"/>
     <disable_collisions link1="link_4" link2="link_6" reason="Never"/>
     <disable_collisions link1="ee" link2="link_5" reason="Never"/>
+
+    <disable_collisions link1="acryllic" link2="floor" reason="Always"/>
+    <disable_collisions link1="ceiling" link2="wall_back" reason="Always"/>
+    <disable_collisions link1="ceiling" link2="wall_front" reason="Always"/>
+    <disable_collisions link1="ceiling" link2="wall_right" reason="Always"/>
+    <disable_collisions link1="floor" link2="wall_back" reason="Always"/>
+    <disable_collisions link1="floor" link2="wall_front" reason="Always"/>
+    <disable_collisions link1="floor" link2="wall_right" reason="Always"/>
+    <disable_collisions link1="wall_right" link2="wall_front" reason="Always"/>
+    <disable_collisions link1="wall_right" link2="wall_back" reason="Always"/>
+    <disable_collisions link1="wall_back" link2="wall_front" reason="Never"/>
 </robot>
