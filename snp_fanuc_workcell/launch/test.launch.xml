@@ -8,6 +8,7 @@
 
   <node pkg="joint_state_publisher" exec="joint_state_publisher">
     <param name="source_list" value="[robot_joint_states]"/>
+    <param from="$(find-pkg-share snp_fanuc_workcell)/config/initial_joint_values.yaml"/>
   </node>
 
   <group if="$(var use_gui)">
