@@ -1,5 +1,4 @@
 #include "roi_selection_mesh_modifier.h"
-#include "color_selection_mesh_modifier.h"
 
 #include <noether_gui/plugin_interface.h>
 

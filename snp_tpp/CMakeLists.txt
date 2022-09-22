@@ -53,12 +53,10 @@ qt5_wrap_ui(${PROJECT_NAME}_ui_mocs
   src/roi_selection_mesh_modifier_widget.ui
   src/color_selection_mesh_modifier_widget.ui)
 qt5_wrap_cpp(${PROJECT_NAME}_mocs
-  src/roi_selection_mesh_modifier.h
-  src/color_selection_mesh_modifier.h)
+  src/roi_selection_mesh_modifier.h)
 
 add_library(${PROJECT_NAME}_mesh_modifier SHARED
   src/roi_selection_mesh_modifier.cpp
-  src/color_selection_mesh_modifier.cpp
   ${${PROJECT_NAME}_ui_mocs}
   ${${PROJECT_NAME}_mocs})
 target_include_directories(
@@ -69,6 +67,7 @@ target_link_libraries(
   noether::noether_tpp
   noether::noether_filtering
   noether::noether_gui)
+#  ${PCL_LIBRARIES})
 ament_target_dependencies(
   ${PROJECT_NAME}_mesh_modifier
   geometry_msgs
