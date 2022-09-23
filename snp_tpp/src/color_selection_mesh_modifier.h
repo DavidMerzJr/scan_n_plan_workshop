@@ -18,8 +18,8 @@ class ColorSelectionMeshModifier : public noether::MeshModifier
 {
 public:
   ColorSelectionMeshModifier(
-      noether::ExtrudedPolygonSubMeshExtractor& extractor,
-      const pcl::PointXYZRGB& background_color_);
+      noether::ExtrudedPolygonSubMeshExtractor extractor,
+      const pcl::PointXYZRGB background_color_);
 
   std::vector<pcl::PolygonMesh> modify(const pcl::PolygonMesh& mesh) const override;
 

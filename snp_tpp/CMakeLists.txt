@@ -50,12 +50,14 @@ ament_target_dependencies(
 
 # Custom mesh modifier
 qt5_wrap_ui(${PROJECT_NAME}_ui_mocs
-  src/roi_selection_mesh_modifier_widget.ui
-  src/color_selection_mesh_modifier_widget.ui)
+  src/color_selection_mesh_modifier_widget.ui
+  src/roi_selection_mesh_modifier_widget.ui)
 qt5_wrap_cpp(${PROJECT_NAME}_mocs
+  src/color_selection_mesh_modifier.h
   src/roi_selection_mesh_modifier.h)
 
 add_library(${PROJECT_NAME}_mesh_modifier SHARED
+  src/color_selection_mesh_modifier.cpp
   src/roi_selection_mesh_modifier.cpp
   ${${PROJECT_NAME}_ui_mocs}
   ${${PROJECT_NAME}_mocs})

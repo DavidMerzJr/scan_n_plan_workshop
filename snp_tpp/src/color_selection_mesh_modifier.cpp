@@ -5,16 +5,17 @@
 
 namespace snp_tpp
 {
+
 ColorSelectionMeshModifier::ColorSelectionMeshModifier(
-    noether::ExtrudedPolygonSubMeshExtractor& extractor,
-    const pcl::PointXYZRGB& background_color)
+    noether::ExtrudedPolygonSubMeshExtractor extractor,
+    const pcl::PointXYZRGB background_color)
   : extractor_(extractor)
   , background_color_(background_color)
 {
   return;
 }
 
-std::vector<pcl::PolygonMesh> modify(const pcl::PolygonMesh& mesh)
+std::vector<pcl::PolygonMesh> ColorSelectionMeshModifier::modify(const pcl::PolygonMesh& mesh) const
 {
   // TODO: Find points sufficiently different from the selected color
   // TODO: Cluster those points
@@ -22,6 +23,7 @@ std::vector<pcl::PolygonMesh> modify(const pcl::PolygonMesh& mesh)
   // TODO: Select out the enclosed submesh, including enclosed areas of background color
   return { mesh };
 }
+
 
 ColorSelectionMeshModifierWidget::ColorSelectionMeshModifierWidget(QWidget* parent)
   : noether::MeshModifierWidget(parent)
@@ -51,4 +53,5 @@ noether::MeshModifier::ConstPtr ColorSelectionMeshModifierWidget::create() const
 
   return std::make_unique<ColorSelectionMeshModifier>(extractor, color);
 }
+
 } // namespace snp_tpp
