@@ -1,9 +1,18 @@
+#include "fit_to_plane_mesh_modifier.h"
 #include "roi_selection_mesh_modifier.h"
 
 #include <noether_gui/plugin_interface.h>
 
 namespace snp_tpp
 {
+struct FitToPlaneMeshModifierWidgetPlugin : public noether::MeshModifierWidgetPlugin
+{
+  QWidget* create(QWidget* parent) const override
+  {
+    return new FitToPlaneMeshModifierWidget(parent);
+  }
+};
+
 struct ROISelectionMeshModifierWidgetPlugin : public noether::MeshModifierWidgetPlugin
 {
   QWidget* create(QWidget* parent) const override
@@ -14,4 +23,5 @@ struct ROISelectionMeshModifierWidgetPlugin : public noether::MeshModifierWidget
 
 }  // namespace snp_tpp
 
+EXPORT_MESH_MODIFIER_WIDGET_PLUGIN(snp_tpp::FitToPlaneMeshModifierWidgetPlugin, FitToPlaneMeshModifier)
 EXPORT_MESH_MODIFIER_WIDGET_PLUGIN(snp_tpp::ROISelectionMeshModifierWidgetPlugin, ROISelectionMeshModifier)
